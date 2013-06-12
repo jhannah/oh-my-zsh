@@ -20,7 +20,6 @@ h4. via `wget`
 
 h3. The manual way
 
-
 1. Clone the repository
 
   @git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh@
@@ -33,12 +32,15 @@ h3. The manual way
 
   @cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc@
 
+4. Add symlinks to miscellaneous files.
 
-4. Set zsh as your default shell:
+  @ln -s ~/.oh-my-zsh/links/gitconfig ~/.gitconfig@
+
+5. Set zsh as your default shell:
 
   @chsh -s /bin/zsh@
 
-5. Start / restart zsh (open a new terminal is easy enough...)
+6. Start / restart zsh (open a new terminal is easy enough...)
 
 h3. Problems?
 

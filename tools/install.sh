@@ -23,6 +23,9 @@ cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 echo "\033[0;34mCopying your current PATH and adding it to the end of ~/.zshrc for you.\033[0m"
 echo "export PATH=\$PATH:$PATH" >> ~/.zshrc
 
+echo "\033[0;34mSymlinking links/\033[0m"
+ln -s ~/.oh-my-zsh/links/gitconfig ~/.gitconfig
+
 echo "\033[0;34mTime to change your default shell to zsh!\033[0m"
 chsh -s `which zsh`
 
