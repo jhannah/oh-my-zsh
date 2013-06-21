@@ -1,0 +1,4 @@
+set expandtab tabstop=4 shiftwidth=4
+set ignorecase
+set encoding=utf-8
+
