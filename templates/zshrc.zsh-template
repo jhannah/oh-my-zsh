@@ -1,8 +1,18 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
+# -------------------------------------
+# Jay did this stuff:
+# -------------------------------------
 export PATH=~/perl5/perlbrew/bin:$PATH
 source ~/perl5/perlbrew/etc/bashrc
+
+# ✗ git reset --hard HEAD^
+# zsh: no matches found: HEAD^
+#     Damn you zsh! 
+# https://github.com/robbyrussell/oh-my-zsh/issues/449
+setopt no_nomatch    # if there are no matches for globs, leave them alone and execute 
+# -------------------------------------
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
