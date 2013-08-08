@@ -24,13 +24,15 @@
 
    st = status
 
-
    # From nicknisi's github:
    dgc = "!sh -c 'git ls-files | grep $1 | xargs git diff $2 $3 -- ' -"
 
+   opendiff = difftool --tool=opendiff
 
 [core]
 	excludesfile = /Users/jhannah/.gitignore_global
+[difftool "opendiff"]
+	external = ~/bin/opendiff-git.sh
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path =
