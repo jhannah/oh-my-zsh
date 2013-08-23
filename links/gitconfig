@@ -27,16 +27,14 @@
    # From nicknisi's github:
    dgc = "!sh -c 'git ls-files | grep $1 | xargs git diff $2 $3 -- ' -"
 
-   opendiff = difftool --tool=opendiff
+   opendiff = difftool --tool=opendiff --no-prompt
+   diffschema = difftool --tool=diffschema --no-prompt
 
 [core]
 	excludesfile = /Users/jhannah/.gitignore_global
 [difftool "opendiff"]
 	external = ~/bin/opendiff-git.sh
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path =
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+[difftool "diffschema"]
+	cmd = \"diff\" -u -I \"Server version\" -I \"Dump completed on\" -I \"AUTO_INCREMENT=\" \"$LOCAL\" \"$REMOTE\"
+
 
