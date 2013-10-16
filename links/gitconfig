@@ -38,3 +38,5 @@
 	cmd = \"diff\" -u -I \"Server version\" -I \"Dump completed on\" -I \"AUTO_INCREMENT=\" \"$LOCAL\" \"$REMOTE\"
 
 
+[rerere]
+	enabled = true
