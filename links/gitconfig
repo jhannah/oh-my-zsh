@@ -42,3 +42,7 @@
 	enabled = true
 [push]
 	default = current
+[http]
+    sslVerify = false
+
+
