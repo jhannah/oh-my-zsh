@@ -41,4 +41,4 @@
 [rerere]
 	enabled = true
 [push]
-#	default = simple
+	default = current
