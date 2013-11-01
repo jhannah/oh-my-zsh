@@ -90,7 +90,7 @@ prompt_git() {
     zstyle ':vcs_info:*' formats ' %u%c'
     zstyle ':vcs_info:*' actionformats '%u%c'
     vcs_info
-    echo -n "${ref/refs\/heads\// }${vcs_info_msg_0_}"
+    echo -n "${ref/refs\/heads\//± }${vcs_info_msg_0_}"
   fi
 }
 
@@ -110,7 +110,11 @@ prompt_hg() {
 				# if working copy is clean
 				prompt_segment green black
 			fi
+<<<<<<< HEAD
 			echo -n $(hg prompt " {rev}@{branch}") $st
+=======
+			echo -n $(hg prompt "☿ {rev}@{branch}") $st
+>>>>>>> 90c28b786ae8a8013fc5083e9cf941115152c706
 		else
 			st=""
 			rev=$(hg id -n 2>/dev/null | sed 's/[^-0-9]//g')
@@ -137,7 +141,11 @@ prompt_dir() {
 # Virtualenv: current working virtualenv
 prompt_virtualenv() {
   local virtualenv_path="$VIRTUAL_ENV"
+<<<<<<< HEAD
   if [[ -n $virtualenv_path ]]; then
+=======
+  if [[ -n $virtualenv_path && -z $VIRTUAL_ENV_DISABLE_PROMPT ]]; then
+>>>>>>> 90c28b786ae8a8013fc5083e9cf941115152c706
     prompt_segment blue black "(`basename $virtualenv_path`)"
   fi
 }
