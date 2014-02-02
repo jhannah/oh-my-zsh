@@ -6,6 +6,7 @@ ZSH=$HOME/.oh-my-zsh
 # -------------------------------------
 export PATH=~/perl5/perlbrew/bin:$PATH
 source ~/perl5/perlbrew/etc/bashrc
+setopt no_share_history
 
 # ✗ git reset --hard HEAD^
 # zsh: no matches found: HEAD^
