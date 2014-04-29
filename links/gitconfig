@@ -1,0 +1,49 @@
+[user]
+	name = Jay Hannah
+	email = jay.hannah@iinteractive.com
+[alias]
+   pushall = "!f() { for repo in origin github; do git push $repo \"$@\"; done; }; f"
+   amend = !git add -p && git commit --amend
+   record = !git add -p && git commit
+   rebase-branch = !git rebase -i $(git merge-base master HEAD)
+   diff-branch = !git diff master..HEAD
+   log-branch = !git log master..HEAD
+   review-branch = !git review master..HEAD
+   review = "!f() { for rev in $(git rev-list --reverse \"$@\"); do git show $rev; done; }; f"
+   unstage = reset -q HEAD
+   info = remote show -n origin
+   graph = log --graph --all --full-history --color --branches --decorate
+   prune-all = !git remote | xargs -n 1 git remote prune
+   aliases = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'
+   lg = log --graph --pretty=format:'%Cred%h%Creset%C(yellow)%d%Creset %C(bold blue)%an %Cgreen(%cr)%Creset%n%s%n' --abbrev-commit --date=relative --stat=72
+   lgs = log --graph --pretty=format:'%Cred%h%Creset%C(yellow)%d%Creset %C(bold blue)%an %Cgreen(%cr)%Creset%n%s%n' --abbrev-commit --date=relative
+
+   # http://stackoverflow.com/questions/1057564/pretty-git-branch-graphs
+   lg1 = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+   lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+
+   st = status
+
+   # From nicknisi's github:
+   dgc = "!sh -c 'git ls-files | grep $1 | xargs git diff $2 $3 -- ' -"
+
+   opendiff = difftool --tool=opendiff --no-prompt
+   diffschema = difftool --tool=diffschema --no-prompt
+
+[core]
+	excludesfile = /Users/jhannah/.gitignore_global
+[difftool "opendiff"]
+	external = ~/bin/opendiff-git.sh
+[difftool "diffschema"]
+	cmd = \"diff\" -u -I \"Server version\" -I \"Dump completed on\" -I \"AUTO_INCREMENT=\" \"$LOCAL\" \"$REMOTE\"
+
+
+[rerere]
+	enabled = true
+[push]
+	default = current
+[http]
+    sslVerify = false
+
+
+
