@@ -78,3 +78,20 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+
+if [[ $HOST = "jhannah-Air" ]]; then
+  export VMDISK=mgd.me2
+else 
+  export VMDISK=mgd.me
+fi 
+export VMDIR=/Volumes/$VMDISK/mm/platform-api-automation
+alias      vmup="cd $VMDIR; make vagrant.up";
+alias        vm="cd $VMDIR; make vagrant.ssh VAGRANT_EXTRA_ARGS='-- -l dev'";
+alias vmsuspend="cd $VMDIR; make vagrant.suspend";
+
+
+export PATH=$PATH:~/.gvm/bin
+[[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
+
+
