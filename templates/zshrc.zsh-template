@@ -85,7 +85,7 @@ if [[ $HOST = "jhannah-Air" ]]; then
 else 
   export VMDISK=mgd.me
 fi 
-export VMDIR=/Volumes/$VMDISK/mm/platform-api-automation
+export VMDIR=/Volumes/$VMDISK/ii/mm/platform-api-automation
 alias      vmup="cd $VMDIR; make vagrant.up";
 alias        vm="cd $VMDIR; make vagrant.ssh VAGRANT_EXTRA_ARGS='-- -l dev'";
 alias vmsuspend="cd $VMDIR; make vagrant.suspend";
