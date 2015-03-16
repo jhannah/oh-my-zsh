@@ -86,9 +86,9 @@ else
   export VMDISK=mgd.me
 fi 
 export VMDIR=/Volumes/$VMDISK/ii/mm/platform-api-automation
-alias      vmup="cd $VMDIR; make vagrant.up";
-alias        vm="cd $VMDIR; make vagrant.ssh VAGRANT_EXTRA_ARGS='-- -l dev'";
-alias vmsuspend="cd $VMDIR; make vagrant.suspend";
+alias      vmup="cd $VMDIR; make vagrant.up FLAVOUR=perl-dev";
+alias        vm="cd $VMDIR; make vagrant.ssh FLAVOUR=perl-dev VAGRANT_EXTRA_ARGS='-- -l dev'";
+alias vmsuspend="cd $VMDIR; make vagrant.suspend FLAVOUR=perl-dev";
 
 
 export PATH=$PATH:~/.gvm/bin
