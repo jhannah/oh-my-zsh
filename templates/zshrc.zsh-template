@@ -82,10 +82,11 @@ source $ZSH/oh-my-zsh.sh
 
 if [[ $HOST = "jhannah-Air" ]]; then
   export VMDISK=mgd.me2
+  export VMDIR=/Volumes/$VMDISK/mm/platform-api-automation
 else 
   export VMDISK=mgd.me
+  export VMDIR=/Volumes/$VMDISK/ii/mm/platform-api-automation
 fi 
-export VMDIR=/Volumes/$VMDISK/ii/mm/platform-api-automation
 alias      vmup="cd $VMDIR; make vagrant.up FLAVOUR=perl-dev";
 alias        vm="cd $VMDIR; make vagrant.ssh FLAVOUR=perl-dev VAGRANT_EXTRA_ARGS='-- -l dev'";
 alias vmsuspend="cd $VMDIR; make vagrant.suspend FLAVOUR=perl-dev";
