@@ -13,6 +13,12 @@ setopt no_share_history
 # Make vagrant happy
 ssh-add ~/.ssh/id_rsa
 
+# perl6 stuff
+export PATH=/Users/jhannah/src/perl6/rakudobrew/bin:/Users/jhannah/src/perl6/rakudo/bin:$PATH
+
+# pg stuff
+export PATH=/Applications/Postgres.app/Contents/Versions/9.4/bin:$PATH
+
 # ✗ git reset --hard HEAD^
 # zsh: no matches found: HEAD^
 #     Damn you zsh!
