@@ -19,6 +19,9 @@ export PATH=/Users/jhannah/src/perl6/rakudobrew/bin:/Users/jhannah/src/perl6/rak
 # pg stuff
 export PATH=/Applications/Postgres.app/Contents/Versions/9.4/bin:$PATH
 
+# fancy vim
+export PATH=/usr/local/Cellar/macvim/7.4-77/bin:$PATH
+
 # ✗ git reset --hard HEAD^
 # zsh: no matches found: HEAD^
 #     Damn you zsh!
