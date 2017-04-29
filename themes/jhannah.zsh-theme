@@ -16,6 +16,9 @@ ssh-add ~/.ssh/id_rsa
 # perl6 stuff
 export PATH=/Users/jhannah/src/perl6/rakudobrew/bin:/Users/jhannah/src/perl6/rakudo/bin:$PATH
 
+# python3 stuff
+export PATH=/Users/jhannah/Library/Python/3.5/bin:$PATH
+
 # pg stuff
 export PATH=/Applications/Postgres.app/Contents/Versions/9.4/bin:$PATH
 
