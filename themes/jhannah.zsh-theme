@@ -21,6 +21,7 @@ export PATH=/Users/jhannah/Library/Python/3.5/bin:$PATH
 
 # pg stuff
 export PATH=/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH
+export PGHOST=localhost
 
 # fancy vim
 export PATH=/usr/local/Cellar/macvim/7.4-77/bin:$PATH
