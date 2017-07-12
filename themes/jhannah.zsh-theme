@@ -20,7 +20,7 @@ export PATH=/Users/jhannah/src/perl6/rakudobrew/bin:/Users/jhannah/src/perl6/rak
 export PATH=/Users/jhannah/Library/Python/3.5/bin:$PATH
 
 # pg stuff
-export PATH=/Applications/Postgres.app/Contents/Versions/9.4/bin:$PATH
+export PATH=/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH
 
 # fancy vim
 export PATH=/usr/local/Cellar/macvim/7.4-77/bin:$PATH
