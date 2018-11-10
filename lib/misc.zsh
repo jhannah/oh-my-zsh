@@ -18,9 +18,8 @@ fi
 ## jobs
 setopt long_list_jobs
 
-## pager
-env_default PAGER 'less'
-env_default LESS '-Ri'
+env_default 'PAGER' 'less'
+env_default 'LESS' '-Ri'
 
 ## super user alias
 alias _='sudo'
