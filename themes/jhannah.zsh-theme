@@ -49,3 +49,9 @@ function removeFromPath() {
 }
 setjdk 1.7
 
+# kubernetes (k8s)
+getpodid() {
+  kubectl get pods -o=name | grep $1 | awk -F "/" '{print $2}'
+}
+
+
