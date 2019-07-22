@@ -53,5 +53,6 @@ setjdk 1.7
 getpodid() {
   kubectl get pods -o=name | grep $1 | awk -F "/" '{print $2}'
 }
+if [ $commands[kubectl] ]; then source <(kubectl completion zsh); fi
 
 
