@@ -1,11 +1,5 @@
-set expandtab tabstop=4 shiftwidth=4
+" set expandtab tabstop=2 shiftwidth=2
 set ignorecase
 set encoding=utf-8
 syntax on
-
-call plug#begin('~/.vim/plugged')
-let g:plug_url_format = 'git@github.com:%s.git'
-Plug 'tpope/vim-fugitive'    "  git@github.com:tpope/vim-fugitive.git
-call plug#end()
-
 

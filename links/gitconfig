@@ -43,7 +43,7 @@
 
 
 [rerere]
-	enabled = true
+	enabled = 1
 [push]
 	default = current
 [http]
@@ -51,3 +51,12 @@
 
 
 
+[merge "adama_extlib"]
+	name = adama extlib merge driver
+	driver = perl bin/extlibmerge '%O' '%A' '%B' '%A'
+	recursive = binary
+[mergetool "adama_extlib"]
+	cmd = perl bin/extlibmerge \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+	trustExitCode = true
+[color]
+	ui = true
