@@ -57,4 +57,6 @@ getpodid() {
 }
 if [ $commands[kubectl] ]; then source <(kubectl completion zsh); fi
 
+# 95% of the time I'm working in here
+cd src/ii/mm/adama
 
