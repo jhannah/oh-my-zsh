@@ -60,3 +60,6 @@ if [ $commands[kubectl] ]; then source <(kubectl completion zsh); fi
 # 95% of the time I'm working in here
 cd src/ii/mm/adama
 
+qadb() { psql -U adama -h "ewr-qa$1db-n1.ewr.mmracks.internal" "adama_qa$1"; }
+qa() { ssh -p722 "ewr-qa$1-n$2"; }
+

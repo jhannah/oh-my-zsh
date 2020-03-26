@@ -116,3 +116,6 @@ export PATH=$PATH:~/.gvm/bin
 [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
 
 
+
+# added by travis gem
+[ -f /Users/jhannah/.travis/travis.sh ] && source /Users/jhannah/.travis/travis.sh
