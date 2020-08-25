@@ -1,5 +1,8 @@
-" set expandtab tabstop=2 shiftwidth=2
+set expandtab tabstop=2 shiftwidth=2
 set ignorecase
 set encoding=utf-8
 syntax on
+set mouse-=a
+set paste
+set noai
 
