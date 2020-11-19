@@ -10,8 +10,6 @@ export PATH=~/perl5/perlbrew/bin:$PATH
 source ~/perl5/perlbrew/etc/bashrc
 # zsh SHARE_HISTORY is gross, and the default. Boo!
 setopt no_share_history
-# Make vagrant happy
-ssh-add ~/.ssh/id_rsa
 
 # perl6 stuff
 export PATH=/Users/jhannah/src/perl6/rakudobrew/bin:/Users/jhannah/src/perl6/rakudo/bin:$PATH
