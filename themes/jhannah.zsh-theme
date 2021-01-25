@@ -58,6 +58,9 @@ if [ $commands[kubectl] ]; then source <(kubectl completion zsh); fi
 # 95% of the time I'm working in here
 cd ~/src/ii/mm/campaigns-api
 
-qadb() { psql -U adama -h "ewr-qa$1db-n1.ewr.mmracks.internal" "adama_qa$1"; }
-qa() { ssh -p722 "ewr-qa$1-n$2.ewr.mmracks.internal"; }
+qadb() { psql -U adama -h "iad-qa$1db-n1.iad.mmracks.internal" "adama_qa$1"; }
+qa() { ssh -p722 "iad-qa$1-n$2.iad.mmracks.internal"; }
+getdevtoken() {
+  curl --silent --request POST --url 'https://mediamath-dev.auth0.com/oauth/token' --header 'content-type: application/json' --data '{"grant_type":"http://auth0.com/oauth/grant-type/password-realm","username": "'$T1_API_USERNAME'","password": "'$T1_API_PASSWORD'","audience": "https://api.mediamath.com/", "scope": "manage:services", "client_id": "'$AUTH0_DEV_CLIENTID'", "client_secret": "'$AUTH0_DEV_SECRET'", "realm": "MediaMathActiveDirectory"}' | jq -r '.access_token'
+}
 
