@@ -32,19 +32,19 @@ setopt no_nomatch    # if there are no matches for globs, leave them alone and e
 
 # Make sbt (Scala) happy
 # http://www.jayway.com/2014/01/15/how-to-switch-jdk-version-on-mac-os-x-maverick/
-function setjdk() {
-  if [ $# -ne 0 ]; then
-    removeFromPath '/System/Library/Frameworks/JavaVM.framework/Home/bin'
-    if [ -n "${JAVA_HOME+x}" ]; then
-      removeFromPath $JAVA_HOME
-    fi
-    export JAVA_HOME=`/usr/libexec/java_home -v $@`
-    export PATH=$JAVA_HOME/bin:$PATH
-  fi
-}
-function removeFromPath() {
-  export PATH=$(echo $PATH | sed -E -e "s;:$1;;" -e "s;$1:?;;")
-}
+#function setjdk() {
+#  if [ $# -ne 0 ]; then
+#    removeFromPath '/System/Library/Frameworks/JavaVM.framework/Home/bin'
+#    if [ -n "${JAVA_HOME+x}" ]; then
+#      removeFromPath $JAVA_HOME
+#    fi
+#    export JAVA_HOME=`/usr/libexec/java_home -v $@`
+#    export PATH=$JAVA_HOME/bin:$PATH
+#  fi
+#}
+#function removeFromPath() {
+#  export PATH=$(echo $PATH | sed -E -e "s;:$1;;" -e "s;$1:?;;")
+#}
 # Uhh... I haven't used Scala in forever
 # setjdk 1.7
 
@@ -66,4 +66,8 @@ getdevtoken() {
 getprodtoken() {
   curl --silent --request POST --url 'https://mediamath.auth0.com/oauth/token' --header 'content-type: application/json' --data '{"grant_type":"http://auth0.com/oauth/grant-type/password-realm","username": "'$T1_API_USERNAME'","password": "'$T1_API_PASSWORD'","audience": "https://api.mediamath.com/", "scope": "manage:services", "client_id": "'$AUTH0_PROD_CLIENTID'", "client_secret": "'$AUTH0_PROD_SECRET'", "realm": "MediaMathActiveDirectory"}' | jq -r '.access_token'
 }
+
+# Go stuff
+export PATH=~/go/bin:$PATH
+# go get github.com/go-jira/jira/cmd/jira
 
