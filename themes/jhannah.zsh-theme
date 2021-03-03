@@ -69,5 +69,5 @@ getprodtoken() {
 
 # Go stuff
 export PATH=~/go/bin:$PATH
-# go get github.com/go-jira/jira/cmd/jira
+# go get github.com/jhannah/jira/cmd/jira
 
