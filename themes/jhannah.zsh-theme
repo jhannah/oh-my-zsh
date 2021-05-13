@@ -21,8 +21,9 @@ export PATH=/Users/jhannah/Library/Python/3.5/bin:$PATH
 export PATH=/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH
 export PGHOST=localhost
 
-# fancy vim
+# brew stuff
 export PATH=/usr/local/Cellar/macvim/7.4-77/bin:$PATH
+export PATH=/usr/local/Cellar/ruby/3.0.1/bin:$PATH
 
 # ✗ git reset --hard HEAD^
 # zsh: no matches found: HEAD^
@@ -55,7 +56,7 @@ getpodid() {
 }
 if [ $commands[kubectl] ]; then source <(kubectl completion zsh); fi
 
-# 95% of the time I'm working in here
+# 95% of the time I'm working in here recently
 cd ~/src/ii/mm/campaigns-api
 
 qadb() { psql -U adama -h "iad-qa$1db-n1.iad.mmracks.internal" "adama_qa$1"; }
