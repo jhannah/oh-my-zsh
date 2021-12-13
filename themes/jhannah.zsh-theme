@@ -11,6 +11,9 @@ source ~/perl5/perlbrew/etc/bashrc
 # zsh SHARE_HISTORY is gross, and the default. Boo!
 setopt no_share_history
 
+# ooo macOS pgrep and pkill! yay!
+alias killgoogledrive="pkill -9 -i 'google drive'"
+
 # perl6 stuff
 export PATH=/Users/jhannah/src/perl6/rakudobrew/bin:/Users/jhannah/src/perl6/rakudo/bin:$PATH
 
