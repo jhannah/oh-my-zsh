@@ -18,7 +18,7 @@ alias killgoogledrive="pkill -9 -i 'google drive'"
 export PATH=/Users/jhannah/src/perl6/rakudobrew/bin:/Users/jhannah/src/perl6/rakudo/bin:$PATH
 
 # python3 stuff
-export PATH=/Users/jhannah/Library/Python/3.5/bin:$PATH
+export PATH=/Users/jhannah/Library/Python/3.8/bin:$PATH
 
 # pg stuff
 export PATH=/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH
@@ -75,5 +75,7 @@ getprodtoken() {
 
 # Go stuff
 export PATH=~/go/bin:$PATH
+# Need this for macOS 12.1 Monterey
+export MallocNanoZone=0
 # go get github.com/jhannah/jira/cmd/jira
 
