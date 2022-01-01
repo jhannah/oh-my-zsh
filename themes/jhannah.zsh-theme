@@ -79,3 +79,6 @@ export PATH=~/go/bin:$PATH
 export MallocNanoZone=0
 # go get github.com/jhannah/jira/cmd/jira
 
+# For ssh'ing to jays.net
+ssh-add ~/.ssh/github-jhannah.id_rsa
+
