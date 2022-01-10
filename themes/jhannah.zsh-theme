@@ -20,6 +20,9 @@ export PATH=/Users/jhannah/src/perl6/rakudobrew/bin:/Users/jhannah/src/perl6/rak
 # python3 stuff
 export PATH=/Users/jhannah/Library/Python/3.8/bin:$PATH
 
+# sqlite stuff
+export PATH="/usr/local/opt/sqlite/bin:$PATH"
+
 # pg stuff
 export PATH=/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH
 export PGHOST=localhost
