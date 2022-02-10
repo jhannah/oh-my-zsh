@@ -8,15 +8,15 @@ if (( $+commands[kubectl] )); then
   command mkdir -p "$ZSH_CACHE_DIR/completions"
   (( ${fpath[(Ie)"$ZSH_CACHE_DIR/completions"]} )) || fpath=("$ZSH_CACHE_DIR/completions" $fpath)
 
-  # If the completion file doesn't exist yet, we need to autoload it and
-  # bind it to `kubectl`. Otherwise, compinit will have already done that.
+  # If the completion file does not exist, generate it and then source it
+  # Otherwise, source it and regenerate in the background
   if [[ ! -f "$ZSH_CACHE_DIR/completions/_kubectl" ]]; then
-    typeset -g -A _comps
-    autoload -Uz _kubectl
-    _comps[kubectl]=_kubectl
+    kubectl completion zsh >| "$ZSH_CACHE_DIR/completions/_kubectl"
+    source "$ZSH_CACHE_DIR/completions/_kubectl"
+  else
+    source "$ZSH_CACHE_DIR/completions/_kubectl"
+    kubectl completion zsh >| "$ZSH_CACHE_DIR/completions/_kubectl" &|
   fi
-
-  kubectl completion zsh >! "$ZSH_CACHE_DIR/completions/_kubectl" &|
 fi
 
 # This command is used a LOT both below and in daily life
@@ -29,7 +29,7 @@ alias kca='_kca(){ kubectl "$@" --all-namespaces;  unset -f _kca; }; _kca'
 alias kaf='kubectl apply -f'
 
 # Drop into an interactive terminal on a container
-alias keti='kubectl exec -ti'
+alias keti='kubectl exec -t -i'
 
 # Manage configuration quickly to switch contexts between local, dev ad staging.
 alias kcuc='kubectl config use-context'
