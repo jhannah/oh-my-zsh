@@ -62,6 +62,9 @@ getpodid() {
 }
 if [ $commands[kubectl] ]; then source <(kubectl completion zsh); fi
 
+# Nemo stuff
+ssh-add -k ~/nemo_jumpbox.pem
+
 # 95% of the time I'm working in here recently
 # cd ~/src/ii/mm/core-serializer
 cd ~/src/ii/mm/campaigns-api
