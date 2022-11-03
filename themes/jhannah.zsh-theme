@@ -30,6 +30,7 @@ export PGHOST=localhost
 # brew stuff
 export PATH=/usr/local/Cellar/macvim/7.4-77/bin:$PATH
 export PATH=/usr/local/Cellar/ruby/3.1.2_1/bin:$PATH
+export PATH=/Users/jhannah/.gem/ruby/3.1.0/bin:$PATH
 
 # ✗ git reset --hard HEAD^
 # zsh: no matches found: HEAD^
