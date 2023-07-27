@@ -48,7 +48,7 @@ export MallocNanoZone=0
 ssh-add ~/.ssh/github-jhannah.id_rsa
 
 # 95% of the time I'm working in here recently
-cd ~/src/codefornebraska/whamo
+cd ~/src/211-Connect/Norse
 
 # --------------------------------------
 # Old MediaMath stuff
