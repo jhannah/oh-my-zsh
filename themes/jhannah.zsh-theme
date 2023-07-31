@@ -18,7 +18,7 @@ alias killgoogledrive="pkill -9 -i 'google drive'"
 export PATH=/Users/jhannah/src/perl6/rakudobrew/bin:/Users/jhannah/src/perl6/rakudo/bin:$PATH
 
 # python3 stuff
-export PATH=/Users/jhannah/Library/Python/3.8/bin:$PATH
+export PATH=/Users/jhannah/Library/Python/3.11/bin:$PATH
 
 # sqlite stuff
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
