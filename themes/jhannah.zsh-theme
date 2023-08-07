@@ -14,6 +14,10 @@ setopt no_share_history
 # ooo macOS pgrep and pkill! yay!
 alias killgoogledrive="pkill -9 -i 'google drive'"
 
+# Javascript stuff
+# 211-Connect/Norse wants 18, not 20
+export PATH="/usr/local/opt/node@18/bin:$PATH"
+
 # perl6 stuff
 export PATH=/Users/jhannah/src/perl6/rakudobrew/bin:/Users/jhannah/src/perl6/rakudo/bin:$PATH
 
