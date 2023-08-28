@@ -121,3 +121,15 @@ export PATH=$PATH:~/.gvm/bin
 
 # added by travis gem
 [ -f /Users/jhannah/.travis/travis.sh ] && source /Users/jhannah/.travis/travis.sh
+
+# NVM stuff (Node Version Manager)
+# https://github.com/nvm-sh/nvm#installing-and-updating
+# /usr/local/lib
+# ├── nx@16.6.0
+# ├── ts-node@10.9.1
+# └── typescript@5.1.6
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
