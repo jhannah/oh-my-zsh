@@ -52,7 +52,7 @@ export MallocNanoZone=0
 ssh-add ~/.ssh/github-jhannah.id_rsa
 
 # 95% of the time I'm working in here recently
-cd ~/src/211-Connect/Norse
+cd ~/src/ii/productinc/RiverdropAdmin
 
 # --------------------------------------
 # Old MediaMath stuff
