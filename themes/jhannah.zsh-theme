@@ -36,6 +36,9 @@ export PATH=/usr/local/Cellar/macvim/7.4-77/bin:$PATH
 export PATH=/usr/local/Cellar/ruby/3.2.2_1/bin:$PATH
 export PATH=/Users/jhannah/.gem/ruby/3.1.0/bin:$PATH
 
+# brew curl
+export PATH=/usr/local/opt/curl/bin:$PATH
+
 # ✗ git reset --hard HEAD^
 # zsh: no matches found: HEAD^
 #     Damn you zsh!
