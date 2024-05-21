@@ -22,7 +22,7 @@ export PATH="/usr/local/opt/node@18/bin:$PATH"
 export PATH=/Users/jhannah/src/perl6/rakudobrew/bin:/Users/jhannah/src/perl6/rakudo/bin:$PATH
 
 # python3 stuff
-export PATH=/Users/jhannah/Library/Python/3.11/bin:$PATH
+# export PATH=/Users/jhannah/Library/Python/3.11/bin:$PATH
 
 # sqlite stuff
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
@@ -56,7 +56,7 @@ export MallocNanoZone=0
 ssh-add ~/.ssh/github-jhannah.id_rsa
 
 # 95% of the time I'm working in here recently
-cd ~/src/ii/productinc/RiverdropAdmin
+cd ~/src/opennebraska/nsorg
 
 # --------------------------------------
 # Old MediaMath stuff
