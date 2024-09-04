@@ -6,6 +6,8 @@ ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[blue]%}) %{$fg[yellow]%}✗%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%})"
 
+export PATH=$HOME/bin:/usr/local/bin
+
 export PATH=~/perl5/perlbrew/bin:$PATH
 source ~/perl5/perlbrew/etc/bashrc
 # zsh SHARE_HISTORY is gross, and the default. Boo!
