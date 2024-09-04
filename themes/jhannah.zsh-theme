@@ -6,7 +6,7 @@ ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[blue]%}) %{$fg[yellow]%}✗%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%})"
 
-export PATH=$HOME/bin:/usr/local/bin
+export PATH=$HOME/bin:/usr/local/bin:/usr/bin:$PATH
 
 export PATH=~/perl5/perlbrew/bin:$PATH
 source ~/perl5/perlbrew/etc/bashrc
