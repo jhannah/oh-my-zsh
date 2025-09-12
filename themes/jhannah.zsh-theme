@@ -58,7 +58,7 @@ export PATH=~/go/bin:$PATH
 ssh-add ~/.ssh/github-jhannah.id_rsa
 
 # 95% of the time I'm working in here recently
-cd ~/src/ii/opentrons
+cd ~/src/notes.jays.net
 
 # --------------------------------------
 # Old MediaMath stuff
@@ -80,18 +80,21 @@ cd ~/src/ii/opentrons
 # }
 
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/jhannah/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/jhannah/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/jhannah/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/jhannah/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
+# ------------------
+# Opentrons stuff I don't want anymore since we're all Docker-y
+# ------------------
+## >>> conda initialize >>>
+## !! Contents within this block are managed by 'conda init' !!
+#__conda_setup="$('/Users/jhannah/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+#if [ $? -eq 0 ]; then
+#    eval "$__conda_setup"
+#else
+#    if [ -f "/Users/jhannah/miniconda3/etc/profile.d/conda.sh" ]; then
+#        . "/Users/jhannah/miniconda3/etc/profile.d/conda.sh"
+#    else
+#        export PATH="/Users/jhannah/miniconda3/bin:$PATH"
+#    fi
+#fi
+#unset __conda_setup
+## <<< conda initialize <<<
 
