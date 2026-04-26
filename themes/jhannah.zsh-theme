@@ -50,9 +50,6 @@ setopt no_nomatch    # if there are no matches for globs, leave them alone and e
 
 # Go stuff
 export PATH=~/go/bin:$PATH
-# Need this for macOS 12.1 Monterey
-# export MallocNanoZone=0
-# go get github.com/jhannah/jira/cmd/jira
 
 # For ssh'ing to jays.net
 ssh-add ~/.ssh/github-jhannah.id_rsa
@@ -60,41 +57,6 @@ ssh-add ~/.ssh/github-jhannah.id_rsa
 # 95% of the time I'm working in here recently
 cd ~/src/notes.jays.net
 
-# --------------------------------------
-# Old MediaMath stuff
-# --------------------------------------
-# qadb() { psql -U adama -h "iad-qa$1db-n1.iad.mmracks.internal" "adama_qa$1"; }
-# kubernetes (k8s)
-# getpodid() {
-#   kubectl get pods -o=name | grep $1 | awk -F "/" '{print $2}'
-# }
-# if [ $commands[kubectl] ]; then source <(kubectl completion zsh); fi
-# ssh-add -k ~/nemo_jumpbox.pem
-# getdevtoken() {
-#   export DEV_JWT=$(curl --silent --request POST --url 'https://mediamath-dev.auth0.com/oauth/token' --header 'content-type: application/json' --data '{"grant_type":"http://auth0.com/oauth/grant-type/password-realm","username": "'$T1_API_USERNAME'","password": "'$T1_API_PASSWORD'","audience": "https://api.mediamath.com/", "client_id": "'$AUTH0_DEV_CLIENTID'", "client_secret": "'$AUTH0_DEV_SECRET'", "realm": "MediaMathActiveDirectory"}' | jq -r '.access_token');
-#   echo "DEV_JWT is now set to $DEV_JWT";
-# }
-# getprodtoken() {
-#   export PROD_JWT=$(curl --silent --request POST --url 'https://auth.mediamath.com/oauth/token' --header 'content-type: application/json' --data '{"grant_type":"http://auth0.com/oauth/grant-type/password-realm","username": "'$T1_API_USERNAME'","password": "'$T1_API_PASSWORD'","audience": "https://api.mediamath.com/", "scope": "read:sample", "client_id": "'$AUTH0_PROD_CLIENTID'", "client_secret": "'$AUTH0_PROD_SECRET'", "realm": "MediaMathActiveDirectory"}' | jq -r '.access_token');
-#   echo "PROD_JWT is now set to $PROD_JWT";
-# }
-
-
-# ------------------
-# Opentrons stuff I don't want anymore since we're all Docker-y
-# ------------------
-## >>> conda initialize >>>
-## !! Contents within this block are managed by 'conda init' !!
-#__conda_setup="$('/Users/jhannah/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-#if [ $? -eq 0 ]; then
-#    eval "$__conda_setup"
-#else
-#    if [ -f "/Users/jhannah/miniconda3/etc/profile.d/conda.sh" ]; then
-#        . "/Users/jhannah/miniconda3/etc/profile.d/conda.sh"
-#    else
-#        export PATH="/Users/jhannah/miniconda3/bin:$PATH"
-#    fi
-#fi
-#unset __conda_setup
-## <<< conda initialize <<<
+# Claude Code 2.1.119
+export PATH="$HOME/.local/bin:$PATH"
 
