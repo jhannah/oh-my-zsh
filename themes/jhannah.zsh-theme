@@ -33,11 +33,14 @@ export PATH="/usr/local/opt/sqlite/bin:$PATH"
 export PATH=/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH
 export PGHOST=localhost
 
+# Homebrew on new m4 mini
+echo "Setting homebrew path"
+export PATH=/opt/homebrew/bin:$PATH
 # brew doctor stuff / Ruby for jekyll for podcast
-export PATH=/usr/local/sbin:$PATH
-export PATH=/usr/local/Cellar/macvim/7.4-77/bin:$PATH
-export PATH=/usr/local/Cellar/ruby/3.2.2_1/bin:$PATH
-export PATH=/Users/jhannah/.gem/ruby/3.1.0/bin:$PATH
+# export PATH=/usr/local/sbin:$PATH
+# export PATH=/usr/local/Cellar/macvim/7.4-77/bin:$PATH
+# export PATH=/usr/local/Cellar/ruby/3.2.2_1/bin:$PATH
+# export PATH=/Users/jhannah/.gem/ruby/3.1.0/bin:$PATH
 
 # brew curl
 export PATH=/usr/local/opt/curl/bin:$PATH
